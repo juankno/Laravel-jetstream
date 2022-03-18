@@ -56,11 +56,13 @@
                         </div>
                     </div>
                     <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        @guest
+                        <a href="{{ route('login') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">{{ __('Login') }}</a>
 
-                        <a href="{{ route('login') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Login</a>
-
-                        <a href="{{ route('register') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Register</a>
-
+                        <a href="{{ route('register') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">{{ __('Register') }}</a>                        
+                        @else
+                        <a href="{{ route('dashboard') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">{{ auth()->user()->name }}</a>
+                        @endguest
                     </div>
                 </div>
             </div>
@@ -89,7 +91,6 @@
     </main>
 
     <footer>
-
     </footer>
 
     <!-- Scripts -->

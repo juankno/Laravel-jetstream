@@ -6,4 +6,6 @@
     <h2 class="text-xl text-gray-600">Formate online como profesional en tecnología</h2>
     <h3 class="text-lg text-gray-500">70% de los graduados duplican sus ingresos</h3>
 </div>
+
+<livewire:course-list />
 @endsection
