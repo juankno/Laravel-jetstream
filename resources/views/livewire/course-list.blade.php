@@ -1,7 +1,7 @@
 <div class="grid grid-cols-3 gap-4 mt-8">
     @foreach ($courses as $course)
     <div class="bg-white shadow-lg rounded-ls px-4 py-6 text-center">
-        <a href="{{ route('course') }}">
+        <a href="{{ route('course', $course) }}">
             <img src="{{ $course->image }}" alt="{{ $course->name }}" class="rounded-md mb-2">
 
             <h1 class="text-lg text-gray-600  truncate uppercase">{{ $course->name }}</h1>

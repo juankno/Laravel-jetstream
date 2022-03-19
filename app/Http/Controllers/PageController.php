@@ -14,6 +14,8 @@ class PageController extends Controller
 
     public function course(Course $course)
     {
-        return view('course');
+        return view('course', [
+            'course' => $course
+        ]);
     }
 }
