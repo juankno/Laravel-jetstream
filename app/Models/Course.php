@@ -40,6 +40,7 @@ class Course extends Model
     {
         return $this->where('category_id', $this->category_id)
             ->with('user')
+            ->where('id', '<>', $this->id)
             ->take(2)
             ->get();
     }
