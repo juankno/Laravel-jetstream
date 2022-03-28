@@ -34,7 +34,19 @@ Next config your database and use:
 php artisan migrate
 ```
 
-now you can use for the authentication package:
+optional, you can use the seeds to generate fake data in the app:
+
+``` bash
+php artisan migrate --seed
+```
+
+Or:
+
+``` bash
+php artisan db:seed
+```
+
+Now you can use for the authentication package:
 
 ``` bash
 npm install && npm run dev
